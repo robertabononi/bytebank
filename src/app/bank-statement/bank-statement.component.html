@@ -6,8 +6,8 @@
   </thead>
   <tbody>
     <tr *ngFor="let transference of transferences">
-      <td>{{ transference?.date }}</td>
-      <td>{{ transference?.value }}</td>
+      <td>{{ transference?.date | date: "short" }}</td>
+      <td>{{ transference?.value | currency }}</td>
       <td>{{ transference?.recipient }}</td>
     </tr>
   </tbody>
