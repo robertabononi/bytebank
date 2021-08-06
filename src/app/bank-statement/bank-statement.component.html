@@ -1,6 +1,14 @@
-<div *ngFor="let transference of transferences">
-  <p>Data: {{ transference?.date }}</p>
-  <p>Valor: {{ transference?.value }}</p>
-  <p>Destinatário: {{ transference?.recipient }}</p>
-</div>
-
+<table>
+  <thead>
+    <th>Data</th>
+    <th>Valor</th>
+    <th>Destinatário</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let transference of transferences">
+      <td>{{ transference?.date }}</td>
+      <td>{{ transference?.value }}</td>
+      <td>{{ transference?.recipient }}</td>
+    </tr>
+  </tbody>
+</table>
