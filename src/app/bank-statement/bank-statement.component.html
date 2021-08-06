@@ -1,2 +1,6 @@
-<p>Valor: {{ transference?.value }}</p>
-<p>Destinatário: {{ transference?.recipient }}</p>
+<div *ngFor="let transference of transferences">
+  <p>Data: {{ transference?.date }}</p>
+  <p>Valor: {{ transference?.value }}</p>
+  <p>Destinatário: {{ transference?.recipient }}</p>
+</div>
+

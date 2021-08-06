@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class BankStatementComponent implements OnInit {
 
-  @Input() transference: any;
+  @Input() transferences!: any[];
 
   constructor() { }
 
