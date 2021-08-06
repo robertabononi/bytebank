@@ -4,8 +4,8 @@
     <th class="tabela__cabecalho__conteudo">Valor</th>
     <th class="tabela__cabecalho__conteudo">Destinatário</th>
   </thead>
-  <tbody class="tabela__linha">
-    <tr *ngFor="let transference of transferences">
+  <tbody>
+    <tr class="tabela__linha" *ngFor="let transference of transferences">
       <td class="tabela__conteudo">{{ transference?.date | date: "short" }}</td>
       <td class="tabela__conteudo">{{ transference?.value | currency }}</td>
       <td class="tabela__conteudo">{{ transference?.recipient }}</td>
