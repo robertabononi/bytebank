@@ -12,6 +12,7 @@ export class NewTransferComponent implements OnInit {
 
   value!: number;
   recipient!: number;
+  //recipient: number = {};
 
   constructor() { }
 
@@ -20,8 +21,16 @@ export class NewTransferComponent implements OnInit {
 
   transfer() {
     console.log('Nova transferência solicitada.');
+
     const valueToEmit = {value: this.value, recipient: this.recipient};
     this.onTransfer.emit(valueToEmit);
+
+    this.clearFields();
+  }
+
+  clearFields() {
+    this.value = 0;
+    this.recipient = 0;
   }
 
 }

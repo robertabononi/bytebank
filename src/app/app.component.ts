@@ -7,12 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'bytebank';
-  value!: number;
-  recipient!: number;
+  transference!: any;
 
   transfer($event: any) {
     console.log($event)
-    this.value = $event.value;
-    this.recipient = $event.recipient;
+    this.transference = $event
   }
 }
