@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TransferencesService } from './services/transferences.service';
+import { TransferencesService } from '../services/transferences.service';
 
 @Component({
   selector: 'app-bank-statement',
