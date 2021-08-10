@@ -23,10 +23,10 @@ export class TransferencesService {
     return this.httpClient.get<Transference[]>(this.url);
   }
 
-  add(transference: any) {
+  add(transference: any): Observable<Transference> {
     this.extra(transference);
 
-    this.transferenceList.push(transference);
+    return this.httpClient.post<Transference>(this.url, transference);
   }
 
   private extra(transference: any) {

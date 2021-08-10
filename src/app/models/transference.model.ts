@@ -1,6 +1,6 @@
 export interface Transference {
-  id?: string;
+  id?: number | string;
   value: number;
-  recipient: string;
+  recipient: number | string;
   date?: Date;
 }
