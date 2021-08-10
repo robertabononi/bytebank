@@ -1,7 +1,8 @@
 import { EventEmitter } from '@angular/core';
 import { Component, OnInit, Output } from '@angular/core';
-import { Transference } from '../models/transference.model';
+import { Router } from '@angular/router';
 
+import { Transference } from '../models/transference.model';
 import { TransferencesService } from '../services/transferences.service';
 
 @Component({
@@ -17,7 +18,10 @@ export class NewTransferComponent implements OnInit {
   recipient!: number;
   //recipient: number = {};
 
-  constructor(private transferencesService: TransferencesService) { }
+  constructor(
+    private transferencesService: TransferencesService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
   }
@@ -34,6 +38,7 @@ export class NewTransferComponent implements OnInit {
       result => {
         console.log(result);
         this.clearFields();
+        this.router.navigateByUrl('extrato');
       },
       (error) => console.error(error)
     );
