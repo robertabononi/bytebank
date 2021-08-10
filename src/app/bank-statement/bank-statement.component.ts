@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { TransferencesService } from './services/transferences.service';
 
 @Component({
   selector: 'app-bank-statement',
@@ -7,11 +8,12 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class BankStatementComponent implements OnInit {
 
-  @Input() transferences!: any[];
+  transferences!: any[];
 
-  constructor() { }
+  constructor(private transferencesService: TransferencesService) { }
 
   ngOnInit(): void {
+    this.transferences = this.transferencesService.transferences;
   }
 
 }
